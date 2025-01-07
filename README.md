@@ -25,3 +25,12 @@
 3. **Framer Motion**: To add smooth animations and enhance the user experience.
 4. **React Date Picker**: For intuitive date selection in forms.
 5. **Daisy UI**: Tailwind CSS-based components for quick and beautiful design.
+
+## Repo Initialization
+
+To get started with this repository, follow these steps:
+
+1. Clone the repository
+2. npm install
+3. npm run dev
+ 
