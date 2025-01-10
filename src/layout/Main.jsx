@@ -6,8 +6,10 @@ function Main() {
   return (
     <div>
       {/* navbar */}
-      <div className="w-[95%] mx-auto  ">
-        <Navbar />
+      <div className="sticky top-0 bg-white shadow-md z-50">
+        <div className="w-[95%] mx-auto   ">
+          <Navbar />
+        </div>
       </div>
 
       {/* main */}

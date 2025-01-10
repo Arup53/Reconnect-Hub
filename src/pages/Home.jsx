@@ -7,6 +7,7 @@ import LatestItems from "../components/LatestItems";
 import HowTo from "../components/HowTo";
 import TrustedPartner from "../components/TrustedPartner";
 import DynamicBannerForPages from "../components/DynamicBannerForPages";
+import AboutUs from "../components/AboutUs";
 
 function Home() {
   const axiosCustom = axiosBasic;
@@ -36,6 +37,10 @@ function Home() {
       {/* how to tutuorial */}
       <section>
         <HowTo />
+      </section>
+      {/* about us */}
+      <section>
+        <AboutUs />
       </section>
       {/* trusted partner */}
       <section>
