@@ -37,7 +37,7 @@ export default function Dashboard() {
 
       {/* Content area */}
       <main className="p-6 bg-gray-100 flex-1 overflow-y-auto  w-full">
-        <div className="bg-white p-4 rounded shadow">
+        <div className="bg-white p-4 rounded shadow min-h[400px]">
           <Outlet />
         </div>
       </main>

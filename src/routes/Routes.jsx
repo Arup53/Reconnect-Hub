@@ -14,7 +14,6 @@ import AllRecovered from "../pages/AllRecovered";
 import DynamicTitle from "../components/DynamicTitle";
 import Error from "../components/Error";
 import Dashboard from "../pages/Dashboard";
-import Sidebar from "../components/dashboard/Sidebar";
 
 const router = createBrowserRouter([
   {
@@ -116,7 +115,7 @@ const router = createBrowserRouter([
         children: [
           {
             path: "settings",
-            element: <div>koi</div>,
+            element: <div className="min-h-[400px]">koi</div>,
           },
         ],
       },
