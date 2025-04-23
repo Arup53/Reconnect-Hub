@@ -52,6 +52,11 @@ function Navbar({ toggleTheme, theme }) {
                   All Recovered Items
                 </Link>
               </li>
+              <li>
+                <Link to="/dashboard" className="justify-between">
+                  Dashboard
+                </Link>
+              </li>
             </>
           )}
         </ul>

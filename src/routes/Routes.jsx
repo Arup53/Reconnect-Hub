@@ -13,6 +13,8 @@ import ItemDeatils from "../pages/ItemDeatils";
 import AllRecovered from "../pages/AllRecovered";
 import DynamicTitle from "../components/DynamicTitle";
 import Error from "../components/Error";
+import Dashboard from "../pages/Dashboard";
+import Sidebar from "../components/dashboard/Sidebar";
 
 const router = createBrowserRouter([
   {
@@ -103,6 +105,20 @@ const router = createBrowserRouter([
             </DynamicTitle>
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/dashboard",
+        element: (
+          <PrivateRoute>
+            <Dashboard />
+          </PrivateRoute>
+        ),
+        children: [
+          {
+            path: "settings",
+            element: <div>koi</div>,
+          },
+        ],
       },
     ],
   },
