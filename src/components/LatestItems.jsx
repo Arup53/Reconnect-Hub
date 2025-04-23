@@ -49,7 +49,7 @@ function LatestItems() {
           to={"/allitems"}
           className="btn w-52  bg-blue-600 text-white text-2xl rounded-full"
         >
-          See All
+          See More
         </Link>
         <button
           className=" btn w-52 text-clip bg-blue-600 text-white text-2xl rounded-full"
