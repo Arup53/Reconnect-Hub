@@ -69,7 +69,12 @@ function AllItems() {
           </button> */}
           </div>
         </form>
-        <button onClick={toggleSort}>Sort By Title</button>
+        <button
+          className="border-blue-400 border-2 px-4 py-2 rounded-full"
+          onClick={toggleSort}
+        >
+          Sort By Title
+        </button>
       </div>
       {isLoading && <LoadingSpinner />}
       {/* main content */}
