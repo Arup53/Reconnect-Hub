@@ -57,6 +57,7 @@ function AuthProvider({ children }) {
         setUser(user);
       } else {
         setUser(user);
+
         const { data } = await axiosCustomSecure.get(`/logout`);
       }
 

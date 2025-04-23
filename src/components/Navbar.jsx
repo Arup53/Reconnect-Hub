@@ -1,4 +1,4 @@
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthProvider";
 import { TfiMenu } from "react-icons/tfi";
 
@@ -7,7 +7,7 @@ function Navbar() {
   const { pathname } = useLocation();
 
   return (
-    <div className="navbar bg-base-100 shadow-sm container px-4 my-2 mx-auto">
+    <div className="navbar  shadow-sm container px-4 my-2 mx-auto ">
       <div className="flex-1">
         <Link to="/" className="flex gap-1 items-center">
           {/* <img className="w-auto h-7" src={logo} alt="" /> */}
@@ -29,10 +29,28 @@ function Navbar() {
             <Link to="/allItems">Lost & Found Items</Link>
           </li>
 
-          {!user && (
+          {!user ? (
             <li>
               <Link to="/login">Login</Link>
             </li>
+          ) : (
+            <>
+              <li>
+                <Link to="/addItems" className="justify-between">
+                  Add Job
+                </Link>
+              </li>
+              <li>
+                <Link to="/myItems" className="justify-between">
+                  Manage My Items
+                </Link>
+              </li>
+              <li>
+                <Link to="/allRecovered" className="justify-between">
+                  All Recovered Items
+                </Link>
+              </li>
+            </>
           )}
         </ul>
 

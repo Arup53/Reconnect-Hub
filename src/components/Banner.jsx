@@ -5,7 +5,7 @@ function Banner() {
   return (
     <div className="w-full   ">
       <div className="w-full   ">
-        <div className=" h-[100vh] ">
+        <div className=" h-[60vh] ">
           <Carousel
             slideInterval={9000}
             theme={{
