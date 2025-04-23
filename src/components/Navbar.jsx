@@ -1,13 +1,29 @@
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthProvider";
 import { TfiMenu } from "react-icons/tfi";
+import { FiSun, FiMoon } from "react-icons/fi";
+import { useEffect, useState } from "react";
 
 function Navbar() {
   const { user, logOut } = useAuth();
   const { pathname } = useLocation();
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    const saved = localStorage.getItem("theme") || "light";
+    setTheme(saved);
+    document.documentElement.setAttribute("data-theme", saved);
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "dark" ? "light" : "dark";
+    setTheme(newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+  };
 
   return (
-    <div className="navbar  shadow-sm container px-4 my-2 mx-auto ">
+    <div className="navbar  shadow-sm container px-4 my-2 mx-auto  ">
       <div className="flex-1">
         <Link to="/" className="flex gap-1 items-center">
           {/* <img className="w-auto h-7" src={logo} alt="" /> */}
@@ -123,6 +139,11 @@ function Navbar() {
             </ul>
           </div>
         )}
+        <li>
+          <button className="btn btn-sm" onClick={toggleTheme}>
+            {theme === "dark" ? <FiSun size={20} /> : <FiMoon size={20} />}
+          </button>
+        </li>
       </div>
     </div>
   );

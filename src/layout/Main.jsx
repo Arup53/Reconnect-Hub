@@ -6,7 +6,7 @@ function Main() {
   return (
     <div>
       {/* navbar */}
-      <div className="sticky top-0 bg-gray-300  shadow-md z-50">
+      <div className={`sticky top-0 bg-gray-300  shadow-md z-50 `}>
         <div className="w-[95%] mx-auto  ">
           <Navbar />
         </div>
