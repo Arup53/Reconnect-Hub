@@ -4,23 +4,9 @@ import { TfiMenu } from "react-icons/tfi";
 import { FiSun, FiMoon } from "react-icons/fi";
 import { useEffect, useState } from "react";
 
-function Navbar() {
+function Navbar({ toggleTheme, theme }) {
   const { user, logOut } = useAuth();
   const { pathname } = useLocation();
-  const [theme, setTheme] = useState("light");
-
-  useEffect(() => {
-    const saved = localStorage.getItem("theme") || "light";
-    setTheme(saved);
-    document.documentElement.setAttribute("data-theme", saved);
-  }, []);
-
-  const toggleTheme = () => {
-    const newTheme = theme === "dark" ? "light" : "dark";
-    setTheme(newTheme);
-    document.documentElement.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
-  };
 
   return (
     <div className="navbar  shadow-sm container px-4 my-2 mx-auto  ">
