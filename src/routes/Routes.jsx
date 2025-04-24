@@ -115,6 +115,14 @@ const router = createBrowserRouter([
         ),
         children: [
           {
+            index: true,
+            element: (
+              <div className="flex justify-center items-center font-bold text-lg md:text-4xl h-[400px]">
+                Welcome
+              </div>
+            ),
+          },
+          {
             path: "settings",
             element: <UserDetails />,
           },
