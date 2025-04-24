@@ -18,17 +18,15 @@ export default function Dashboard() {
       >
         <h2 className="text-2xl font-bold mb-6">Dashboard</h2>
         <nav className="flex flex-col gap-4">
-          <a href="#" className="hover:bg-gray-700 p-2 rounded">
+          <Link to="/" className="hover:bg-gray-700 p-2 rounded">
             Home
-          </a>
-          <a href="#" className="hover:bg-gray-700 p-2 rounded">
-            Analytics
-          </a>
+          </Link>
+
           <Link
             to="/dashboard/settings"
             className="hover:bg-gray-700 p-2 rounded"
           >
-            Settings
+            User Details
           </Link>
         </nav>
       </div>
