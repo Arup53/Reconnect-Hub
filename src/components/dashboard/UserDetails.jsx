@@ -32,7 +32,7 @@ function UserDetails() {
           <p>Email: {user?.email}</p>
 
           <button
-            className="btn btn-sm mt-4"
+            className="px-2 py-1 border-2 border-blue-500 rounded-full mt-4 text-base "
             onClick={() => setShowForm(!showForm)}
           >
             {showForm ? "Cancel" : "Update Profile"}
@@ -65,7 +65,7 @@ function UserDetails() {
               </label>
               <button
                 type="submit"
-                className="btn btn-primary btn-sm self-end"
+                className=" px-2 py-1 bg-blue-500 rounded-full self-end text-white"
                 disabled={loading}
               >
                 {loading ? "Updating..." : "Save Changes"}
