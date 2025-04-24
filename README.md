@@ -8,9 +8,9 @@
 
 [Live Link](https://assign-11-ef9ac.firebaseapp.com)
 
-## 📂 GitHub Repository
+## 📂 Server Github Repo
 
-[GitHub Link](https://github.com/programming-hero-web-course2/b10a11-client-side-Arup53)
+[GitHub Link](https://github.com/Arup53/server-reconnect-hub)
 
 ## Key Features
 
